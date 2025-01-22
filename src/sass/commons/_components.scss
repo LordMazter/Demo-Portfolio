@@ -1,0 +1,132 @@
+/* Blockquote & Callouts */
+blockquote.model-1 {
+   padding: 56px 26px 26px 29px;
+   border-radius: 6px 16px 16px 6px;
+   max-width: 900px;
+   margin: 16px auto;
+   position: relative;
+   
+   &::before {
+      position: absolute;
+      top: 20px;
+      left: 26px;
+      color: var(--font-secondary-color);
+      font-size: var(--font-secondary-size);
+      font-weight: bold;
+   }
+   &::after {
+      content: '';
+      position: absolute;
+      background: var(--modal-bgn-exlow);
+      border-radius: 99px;
+      top: 0;
+      left: 0;
+      width: 6px;
+      height: 100%;
+   }
+   p {
+      font-size: var(--font-small-size);
+      color: var(--font-secondary-color);
+      font-style: italic;
+   }
+}
+
+
+blockquote.tip.model-1 {
+   background: var(--accent-blue-low);
+   
+   &::before {
+      content: 'Tip';
+      color: var(--accent-blue);
+   }
+   &::after {
+      background: var(--accent-blue);
+   }
+}
+
+blockquote.note.model-1 {
+   background: var(--accent-green-low);
+   &::before {
+      content: 'Note';
+      color: var(--accent-green);
+   }
+   &::after {
+      background: var(--accent-green);
+   }
+}
+blockquote.important.model-1 {
+   background: var(--accent-orange-low);
+   &::before {
+      content: 'Important';
+      color: var(--accent-orange);
+   }
+   &::after {
+      background: var(--accent-orange);
+   }
+}
+
+
+
+/* Tags & Roles */
+.tag.model-1 {
+   display: inline-block;
+   background: var(--modal-bgn-low);
+   padding: 9px 16px;
+   border-radius: 99px;
+   border: 1px solid var(--modal-bgn-base);
+   font-size: var(--font-small-size);
+   overflow: hidden;
+   white-space: nowrap;
+   text-overflow: ellipsis;
+   max-width: 160px;
+}
+
+.tag.blue {
+   background: var(--accent-blue-low);
+   color: var(--accent-blue);
+}
+.tag.orange {
+   background: var(--accent-orange-low);
+   color: var(--accent-orange);
+}
+.tag.purple {
+   background: var(--accent-purple-low);
+   color: var(--accent-purple);
+}
+
+
+
+.inline-link {
+   display: inline-block;
+   background: var(--modal-bgn-base);
+   border: 1px solid var(--modal-bgn-base);
+   border-radius: 99px;
+   width: 30px;
+   height: 30px;
+   flex-shrink: 0;
+   cursor: pointer;
+   
+   &:hover {
+      animation: levitate 10s ease infinite;
+      transform: translate(0, 6px);
+      transition: all .3s ease;
+   }
+}
+
+.inline-link.blue {
+   background: var(--accent-blue-low);
+   border-color: var(--accent-blue-low);
+   box-shadow:
+      0 0 16px var(--accent-blue-low),
+      0 0 19px var(--accent-blue-low),
+      0 0 24px var(--accent-blue-low);
+}
+
+.inline-link.red {
+   background: var(--accent-red-low);
+   border-color: var(--accent-red-low);
+   box-shadow:
+      0 0 16px var(--accent-red-low),
+      0 0 19px var(--accent-red-low),
+      0 0 24px var(--accent-red-low);
+}

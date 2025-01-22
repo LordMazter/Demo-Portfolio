@@ -1,0 +1,67 @@
+
+/* 
+99s / №i * (№i * item) * -1
+*/
+
+@view-transition { navigate: auto; /* Enable */ }
+
+
+@keyframes slide-rl /* Right to Left (rl) */ {
+   to {
+      left: -280px;
+   }
+}
+
+@keyframes slide-lr /* Left to Right (lr) */ {
+   to {
+      right: -280px;
+   }
+}
+
+@keyframes appear-left {
+   from {
+      opacity: 0;
+      transform: translateX(-500px);
+   }
+   to {
+      opacity: 1;
+      transform: translateX(0);
+   }
+}
+
+@keyframes appear-bottom {
+   from {
+      opacity: 0;
+      transform: translateY(300px);
+   }
+   to {
+      transform: translateY(0);
+      opacity: 1;
+   }
+}
+
+/* Animación de levitación con rotación */
+@keyframes levitate {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  15% {
+    transform: translate(-10px, -15px) 
+    rotate(-1deg) scale(1.02)
+    ;
+  }
+  45% {
+    transform: translate(-10px, 15px) 
+    rotate(-0.3) scale(1.06)
+    ;
+  }
+  75% {
+     transform: translate(10px, -6px) 
+     rotate(1deg) scale(0.96);
+  }
+  100% {
+    transform: translate(0, 0) 
+    rotate(0deg) scale(1)
+    ;
+  }
+}

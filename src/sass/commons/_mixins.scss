@@ -1,0 +1,14 @@
+
+@mixin card-model-base {
+   padding: 16px 19px;
+   border: 1px solid var(--modal-bgnd-base);
+   box-sizing: border-box;
+}
+
+@mixin block-template-base($dvh) {
+   width: 100dvw;
+   min-height: $dvh;
+   border-bottom: 1px solid var(--modal-bgnd-light);
+   overflow: hidden;
+   box-sizing: border-box;
+}

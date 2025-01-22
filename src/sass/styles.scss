@@ -1,0 +1,17 @@
+/* PARCIALS XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+@use 'commons/_colors';
+@use 'commons/_components.scss';
+@use 'commons/_motion.scss';
+@use 'commons/_font-style.scss';
+@use 'commons/_buttons.scss';
+@use 'commons/_mixins.scss';
+@use 'commons/main.scss';
+
+
+
+/* Formatting XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+:root {
+  background: var(--bgn-primary);
+  color: var(--font-primary-color);
+}
+
