@@ -4,6 +4,7 @@
   /* Base Background Colors */
   --bgn-primary: #121116;
   --bgn-primary-low: #1211166A;
+  --bgn-primary-deep: #0C0B0E;
   --bgn-secondary: #18171A;
   /* Modals Background Colors */
   --modal-bgn-base: #d3d1e214;
@@ -143,6 +144,78 @@ blockquote.important.model-1::after {
   background: var(--accent-red-low);
   border-color: var(--accent-red-low);
   box-shadow: 0 0 16px var(--accent-red-low), 0 0 19px var(--accent-red-low), 0 0 24px var(--accent-red-low);
+}
+
+.inline-url.active {
+  color: var(--font-secondary-color);
+  font-weight: 555;
+}
+
+.inline-url.disable {
+  color: var(--font-terceary-color);
+  position: relative;
+  text-decoration: underline;
+}
+.inline-url.disable::after {
+  transition: all 0.3s ease;
+  content: "Sin Resultados";
+  color: var(--font-secondary-color);
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  backdrop-filter: blur(6px);
+  background: var(--bgn-primary-low);
+  box-shadow: inset 0 0 0 1px var(--modal-bgn-base);
+  padding: 6px 9px;
+  border-radius: 99px;
+  white-space: nowrap;
+  opacity: 0;
+}
+.inline-url.disable:hover::after {
+  opacity: 1;
+}
+
+.card-gallery.model-1 {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 260px;
+  aspect-ratio: 1/1.19;
+  border: 1.6px solid var(--modal-bgn-base);
+  background: var(--modal-bgn-exlow);
+  border-radius: 24px;
+  overflow: hidden;
+}
+.card-gallery.model-1 .snippet-name {
+  padding: 16px 49px 16px 16px;
+  font-size: var(--font-small-size);
+  font-weight: 555;
+  background: var(--modal-bgn-low);
+  border-bottom: 1.6px solid var(--modal-bgn-base);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.card-gallery.model-1 .card-image {
+  display: flex;
+  margin: auto;
+  width: 94%;
+  aspect-ratio: 1/1;
+  background: var(--modal-bgn-base);
+  box-shadow: inset 0 0 0 1px var(--modal-bgn-base);
+  border-radius: 6px 6px 16px 16px;
+  overflow: hidden;
+}
+.card-gallery.model-1 .card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 0.9px solid var(--modal-bgn-base);
+  border-radius: 6px 6px 16px 16px;
+}
+.card-gallery.model-1 .card-image img:hover {
+  filter: brightness(1.02);
 }
 
 /* 
@@ -312,6 +385,7 @@ p.small-text {
   cursor: pointer;
   text-decoration: none;
   box-sizing: border-box;
+  flex-shrink: 0;
 }
 .btn-base:hover, .btn-base-2:hover {
   scale: 1.03;
@@ -352,6 +426,7 @@ p.small-text {
   font-weight: 555;
   color: var(--font-primary-color);
   box-sizing: border-box;
+  white-space: nowrap;
 }
 
 * {
@@ -372,6 +447,7 @@ main {
   display: flex;
   width: 100vw;
   height: 100vh;
+  min-height: 700px;
   box-sizing: border-box;
   border-bottom: 1px solid var(--modal-bgn-base);
   overflow: hidden;
@@ -593,6 +669,7 @@ main {
   left: 19px;
 }
 
+/* ... > $Nav Selection > Manu Item _____________*/
 .label-model-1.label {
   width: 300px;
   height: 100px;
@@ -625,33 +702,40 @@ main {
   transition: all 0.3s ease;
 }
 
+/* My Pic */
 .label-model-1.label:hover .float-itsame {
   opacity: 1;
   height: 150px;
   width: 150px;
 }
 
+/* ... > Manu Item > Motion _____________________*/
 .label-model-2.label {
   position: relative;
   animation: appear-bottom 1s ease forwards;
 }
 
 .label-model-2:nth-child(2) {
-  animation-delay: 3.5s;
-}
-
-.label-model-2:nth-child(3) {
-  animation-delay: 3.75s;
-}
-
-.label-model-2:nth-child(4) {
-  animation-delay: 4s;
-}
-
-.label-model-2:nth-child(5) {
   animation-delay: 4.25s;
 }
 
+.label-model-2:nth-child(3) {
+  animation-delay: 4.5s;
+}
+
+.label-model-2:nth-child(4) {
+  animation-delay: 4.75s;
+}
+
+.label-model-2:nth-child(5) {
+  animation-delay: 5s;
+}
+
+.label-model-2:nth-child(6) {
+  animation-delay: 5.25s;
+}
+
+/* ... > Manu Item > CTA _______________________*/
 .label.__contact {
   background: var(--modal-bgn-base);
 }
@@ -660,10 +744,12 @@ main {
   color: var(--accent-red);
 }
 
+/* BLOCK 2 #####################################*/
+/* Block 2 > Scrollable Side ___________________*/
 .slider-area {
   display: flex;
   width: 100%;
-  height: 80%;
+  height: 100%;
   position: relative;
   overflow: hidden;
   box-sizing: border-box;
@@ -677,7 +763,7 @@ main {
   flex-shrink: 0;
   gap: 16px;
   position: relative;
-  mask-image: linear-gradient(to bottom, transparent, var(--bgn-primary) 20%, var(--bgn-primary) 80%, transparent);
+  mask-image: linear-gradient(to bottom, transparent, var(--bgn-primary) 10%, var(--bgn-primary) 90%, transparent);
   overflow: hidden;
 }
 .slider-area .window-area::after, .slider-area .window-area:not(:last-child)::before {
@@ -699,6 +785,7 @@ main {
   transform: translate(50%, -50%);
 }
 
+/* Scrollable Side > Cards Block _______________*/
 .window-area .card.model-1 {
   aspect-ratio: 16/11;
   width: 80%;
@@ -752,10 +839,12 @@ main {
     font-size: 2rem !important;
   }
 }
+/* ... > Cards Block > Cards ____________________*/
 .card.model-1 {
   animation: levitate 40s ease-in-out infinite;
 }
 
+/* ... > Cards > $Items Decorator _______________*/
 .card.model-1 .floatmoji {
   background: var(--bgn-secondary);
   border: 1px solid var(--modal-bgn-base);
@@ -791,12 +880,14 @@ main {
   rotate: -3deg;
 }
 
+/* Scrollable Side > CTA ______________________*/
 .window-area .btn-base-2.--cta {
   width: 80%;
   max-width: 500px;
   margin-inline: auto;
 }
 
+/* Scrollable Side > Scroll buttons ___________*/
 .window-area .navigation-scroll {
   display: flex;
   gap: 16px;
@@ -808,6 +899,8 @@ main {
   width: 100%;
 }
 
+/* BLOCK 3 ######################################*/
+/* Text Block __________________________________ */
 .message-box {
   width: 90%;
   min-height: 80px;
@@ -862,6 +955,7 @@ main {
   rotate: -1deg;
 }
 
+/* FOOTER #######################################*/
 .bigfoot {
   display: flex;
   flex-direction: column;
@@ -879,12 +973,88 @@ main {
 .bigfoot * {
   margin-inline: auto;
   text-align: center;
+  font-size: var(--font-small-size);
+}
+
+/* BLOCK 4 ######################################*/
+.__block-4 {
+  align-items: center;
+}
+
+.sample-gallery-box {
+  width: 100%;
+  height: 100%;
+  min-height: 450px;
+  box-sizing: border-box;
+  position: relative;
+  mask-image: linear-gradient(to left, transparent, var(--bgn-primary) 30%, var(--bgn-primary) 70%, transparent);
+}
+.sample-gallery-box::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 160%;
+  background: radial-gradient(circle at center, var(--accent-blue), transparent, transparent);
+  aspect-ratio: 1/1;
+  opacity: 12%;
+  z-index: -1;
+}
+.sample-gallery-box .card-gallery.model-1 {
+  position: absolute;
+  left: 2160px;
+  top: 50%;
+  transform: translateY(-50%);
+  animation: slide-rl 60s linear infinite;
+}
+.sample-gallery-box .btn-base-2 {
+  position: absolute;
+  width: 80%;
+  max-width: 300px;
+  bottom: 80px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.sample-gallery-box .card-gallery:first-child {
+  animation-delay: -42.9184549356s;
+}
+
+.sample-gallery-box .card-gallery:nth-child(2) {
+  animation-delay: -34.3347639485s;
+}
+
+.sample-gallery-box .card-gallery:nth-child(3) {
+  animation-delay: -25.7510729614s;
+}
+
+.sample-gallery-box .card-gallery:nth-child(4) {
+  animation-delay: -17.1673819742s;
+}
+
+.sample-gallery-box .card-gallery:nth-child(5) {
+  animation-delay: -8.5836909871s;
+}
+
+.sample-gallery-box .card-gallery:nth-child(6) {
+  animation-delay: 0s;
+}
+
+.sample-gallery-box .card-gallery:nth-child(7) {
+  animation-delay: 8.5836909871s;
 }
 
 /* Formatting XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
 :root {
-  background: var(--bgn-primary);
+  background-color: var(--bgn-primary);
   color: var(--font-primary-color);
 }
+
+/* COMPILE SASS: Being on 'src'
+sass --watch sass/styles.scss:css/styles.css
+sass/style-projects.scss:css/style-projects.css
+sass/style-gallery.scss:css/style-gallery.css
+*/
 
 /*# sourceMappingURL=styles.css.map */

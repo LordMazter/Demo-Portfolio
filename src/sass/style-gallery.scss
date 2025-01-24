@@ -1,15 +1,14 @@
-/* PARCIALS XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+/* PARCIALS ######################################*/
 @use 'commons/_colors';
 @use 'commons/_components.scss';
 @use 'commons/_motion.scss';
 @use 'commons/_font-style.scss';
 @use 'commons/_buttons.scss';
 @use 'commons/_mixins.scss';
-@use 'commons/main-p1.scss';
+@use 'commons/main-gallery.scss';
 
 
-
-/* Formatting XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+/* FORMATTING ####################################*/
 * {
    margin: 0;
    padding: 0;
@@ -17,8 +16,7 @@
 }
 
 :root {
-  background-color: var(--bgn-primary);
-  color: var(--font-primary-color);
-  font-family: 'trispace' !important;
+   background-color: var(--bgn-primary);
+   color: var(--font-primary-color);
 }
 

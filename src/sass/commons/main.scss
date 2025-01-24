@@ -17,6 +17,7 @@ main {
    display: flex;
    width: 100vw;
    height: 100vh;
+   min-height: 700px;
    box-sizing: border-box;
    border-bottom: 1px solid var(--modal-bgn-base);
    overflow: hidden;
@@ -236,7 +237,7 @@ main {
    }
 }
 
-
+/* ... > $Nav Selection > Manu Item _____________*/
 .label-model-1.label {
    width: 300px;
    height: 100px;
@@ -270,29 +271,35 @@ main {
    }
 }
 
+/* My Pic */
 .label-model-1.label:hover .float-itsame {
    opacity: 1;
    height: 150px;
    width: 150px;
 }
 
+/* ... > Manu Item > Motion _____________________*/
 .label-model-2.label {
    position: relative;
    animation: appear-bottom 1s ease forwards;
 }
 .label-model-2:nth-child(2) {
-   animation-delay: calc(1s / 4 * (18 - 4));
+   animation-delay: calc(1s / 4 * (16 + 1));
 }
 .label-model-2:nth-child(3) {
-   animation-delay: calc(1s / 4 * (18 - 3));
+   animation-delay: calc(1s / 4 * (16 + 2));
 }
 .label-model-2:nth-child(4) {
-   animation-delay: calc(1s / 4 * (18 - 2));
+   animation-delay: calc(1s / 4 * (16 + 3));
 }
 .label-model-2:nth-child(5) {
-   animation-delay: calc(1s / 4 * (18 - 1));
+   animation-delay: calc(1s / 4 * (16 + 4));
+}
+.label-model-2:nth-child(6) {
+   animation-delay: calc(1s / 4 * (16 + 5));
 }
 
+/* ... > Manu Item > CTA _______________________*/
 .label.__contact {
    background: var(--modal-bgn-base);
 }
@@ -302,12 +309,13 @@ main {
 }
 
 
+/* BLOCK 2 #####################################*/
 
-
+/* Block 2 > Scrollable Side ___________________*/
 .slider-area {
    display: flex;
    width: 100%;
-   height: 80%;
+   height: 100%;
    position: relative;
    overflow: hidden;
    box-sizing: border-box;
@@ -323,8 +331,8 @@ main {
       position: relative;
       mask-image: linear-gradient(to bottom,
          transparent,
-         var(--bgn-primary) 20%,
-         var(--bgn-primary) 80%,
+         var(--bgn-primary) 10%,
+         var(--bgn-primary) 90%,
          transparent);
       overflow: hidden;
       
@@ -350,9 +358,12 @@ main {
          right: 0;
          transform: translate(50%, -50%);
       }
+      
+      
    }
 }
 
+/* Scrollable Side > Cards Block _______________*/
 .window-area .card.model-1 {
    aspect-ratio: 16 / 11 ;
    width: 80%;
@@ -415,10 +426,12 @@ main {
    }
 }
 
+/* ... > Cards Block > Cards ____________________*/
 .card.model-1 {
    animation: levitate 40s ease-in-out infinite;
 }
 
+/* ... > Cards > $Items Decorator _______________*/
 .card.model-1 .floatmoji {
    background: var(--bgn-secondary);
    border: 1px solid var(--modal-bgn-base);
@@ -452,12 +465,14 @@ main {
    rotate: -3deg;
 }
 
+/* Scrollable Side > CTA ______________________*/
 .window-area .btn-base-2.--cta {
    width: 80%;
    max-width: 500px;
    margin-inline: auto;
 }
 
+/* Scrollable Side > Scroll buttons ___________*/
 .window-area .navigation-scroll {
    display: flex;
    gap: 16px;
@@ -471,6 +486,10 @@ main {
 }
 
 
+
+/* BLOCK 3 ######################################*/
+
+/* Text Block __________________________________ */
 .message-box {
    width: 90%;
    min-height: 80px;
@@ -528,6 +547,8 @@ main {
 }
 
 
+
+/* FOOTER #######################################*/
 .bigfoot {
    display: flex;
    flex-direction: column;
@@ -545,5 +566,92 @@ main {
    * {
       margin-inline: auto;
       text-align: center;
+      font-size: var(--font-small-size);
    }
 }
+
+
+
+/* BLOCK 4 ######################################*/
+.__block-4 {
+   align-items: center;
+}
+
+.sample-gallery-box {
+   width: 100%;
+   height: 100%;
+   min-height: 450px;
+   box-sizing: border-box;
+   position: relative;
+   mask-image: linear-gradient(to left,
+      transparent,
+      var(--bgn-primary) 30%,
+      var(--bgn-primary) 70%,
+      transparent);
+   
+   &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 160%;
+      background: radial-gradient(circle at center,
+      var(--accent-blue), 
+      transparent,
+      transparent);
+      aspect-ratio: 1/1;
+      opacity: 12%;
+      z-index: -1;
+   }
+   
+   .card-gallery.model-1 {
+      position: absolute;
+      left: calc(360px * 6);
+      top: 50%;
+      transform: translateY(-50%);
+      animation: slide-rl 60s linear infinite;
+   }
+   .btn-base-2 {
+      position: absolute;
+      width: 80%;
+      max-width: 350px;
+      bottom: 100px;
+      left: 50%;
+      transform: translate(-50%, 0);
+   }
+}
+
+.sample-gallery-box
+.card-gallery:first-child {
+   animation-delay: calc(60s / 6.99 * (6 - 1) * -1);
+}
+.sample-gallery-box
+.card-gallery:nth-child(2) {
+   animation-delay: calc(60s / 6.99 * (6 - 2) * -1);
+}
+
+.sample-gallery-box
+.card-gallery:nth-child(3) {
+   animation-delay: calc(60s / 6.99 * (6 - 3) * -1);
+}
+
+.sample-gallery-box
+.card-gallery:nth-child(4) {
+   animation-delay: calc(60s / 6.99 * (6 - 4) * -1);
+}
+
+.sample-gallery-box
+.card-gallery:nth-child(5) {
+   animation-delay: calc(60s / 6.99 * (6 - 5) * -1);
+}
+
+.sample-gallery-box
+.card-gallery:nth-child(6) {
+   animation-delay: calc(60s / 6.99 * (6 - 6) * -1);
+}
+.sample-gallery-box
+.card-gallery:nth-child(7) {
+   animation-delay: calc(60s / 6.99 * (6 - 7) * -1);
+}
+

@@ -11,7 +11,12 @@
 
 /* Formatting XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
 :root {
-  background: var(--bgn-primary);
+  background-color: var(--bgn-primary);
   color: var(--font-primary-color);
 }
 
+/* COMPILE SASS: Being on 'src'
+sass --watch sass/styles.scss:css/styles.css
+sass/style-projects.scss:css/style-projects.css
+sass/style-gallery.scss:css/style-gallery.css
+*/
