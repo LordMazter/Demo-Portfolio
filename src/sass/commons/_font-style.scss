@@ -52,7 +52,7 @@
 /* Headers Format ################################*/
 h1 {
    color: var(--cap-primary-color);
-   font-family: 'passion-black';
+   font-family: 'passion-black' !important;
    letter-spacing: 1px;
 }
 h2 {

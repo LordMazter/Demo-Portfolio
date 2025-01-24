@@ -318,7 +318,7 @@ blockquote.important.model-1::after {
 /* Headers Format ################################*/
 h1 {
   color: var(--cap-primary-color);
-  font-family: "passion-black";
+  font-family: "passion-black" !important;
   letter-spacing: 1px;
 }
 
@@ -1011,8 +1011,8 @@ main {
 .sample-gallery-box .btn-base-2 {
   position: absolute;
   width: 80%;
-  max-width: 300px;
-  bottom: 80px;
+  max-width: 350px;
+  bottom: 100px;
   left: 50%;
   transform: translate(-50%, 0);
 }
