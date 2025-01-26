@@ -385,7 +385,10 @@ p.small-text {
   cursor: pointer;
   text-decoration: none;
   box-sizing: border-box;
-  flex-shrink: 0;
+  /* flex-shrink: 0; */
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .btn-base:hover, .btn-base-2:hover {
   scale: 1.03;
@@ -427,6 +430,8 @@ p.small-text {
   color: var(--font-primary-color);
   box-sizing: border-box;
   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .__block {

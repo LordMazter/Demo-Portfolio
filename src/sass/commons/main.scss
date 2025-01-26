@@ -474,14 +474,17 @@ main {
 
 /* Scrollable Side > Scroll buttons ___________*/
 .window-area .navigation-scroll {
-   display: flex;
+   display: flex !important;
    gap: 16px;
-   width: 80%;
+   width: 80% !important;
    max-width: 500px;
    margin-inline: auto;
+   box-sizing: border-box;
+   overflow: hidden;
    
    .btn-base-2 {
       width: 100%;
+      flex-shrink: 1 !important;
    }
 }
 

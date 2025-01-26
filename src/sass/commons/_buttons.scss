@@ -9,7 +9,10 @@
    cursor: pointer;
    text-decoration: none;
    box-sizing: border-box;
-   flex-shrink: 0;
+   /* flex-shrink: 0; */
+   overflow: hidden;
+   white-space: nowrap;
+   text-overflow: ellipsis;
    
    &:hover {
       scale: 1.03;
@@ -52,4 +55,6 @@
    color: var(--font-primary-color);
    box-sizing: border-box;
    white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
 }
