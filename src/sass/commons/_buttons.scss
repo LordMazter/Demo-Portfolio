@@ -1,4 +1,4 @@
-
+/* @BASE BUTTON :::::::::::::::::::::::::::::::: */
 .btn-base, .btn-base-2 {
    display: inline-block;
    background: var(--modal-bgn-medium);
@@ -27,26 +27,32 @@
    }
 }
 
+/* @BTN ROUNDED :::::::::::::::::::::::::::::::: */
 .btn-base {
    border-radius: 99px;
 }
+/* @BTN REGTANGLE :::::::::::::::;;::::::::::::: */
 .btn-base-2 {
    border-radius: 9px;
 }
 
+/* @BTN DISABLE ::::::::::::::::::::::::::::::::*/
 .btn-base.is-disable, .btn-base-2.is-disable {
    background: var(--modal-bgn-exlow);
    span {
       color: var(--font-terceary-color);
    }
 }
+/* @CTA BUTTON :::::::::::::::::::::::::::::::: */
 .btn-base.--cta, .btn-base-2.--cta {
    background: var(--accent-blue);
 }
+/* @RED BUTTON :::::::::::::::::::::::::::::::: */
 .btn-base.--intence, .btn-base-2.--intence {
    background: var(--accent-red);
 }
 
+/* @TEXT BUTTON :::::::::::::::::::::::::::::::*/
 .btn-base span, .btn-base-2 span {
    display: flex;
    justify-content: center;
